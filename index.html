@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Bevis Angular</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="styles.css">
+		<!-- Load libraries -->
+		<!-- core-js 是为老式浏览器提供的填充库， zone.js 和 reflect-metadata 库是 Angular 需要的，而 SystemJS 库是用来做模块加载的 -->
+		<script src="node_modules/core-js/client/shim.min.js"></script>
+		<script src="node_modules/zone.js/dist/zone.js"></script>
+		<script src="node_modules/reflect-metadata/Reflect.js"></script>
+		<script src="node_modules/systemjs/dist/system.src.js"></script>
+		<!-- SystemJS 的配置文件和一段脚本，它导入并运行了 main 文件中写的 app 模块 -->
+		<script src="systemjs.config.js"></script>
+		<script>
+			System.import('app').catch(function(err){ console.error(err); });
+		</script>
+	</head>
+	<body>
+		<!-- <my-app> 标签是应用程序生活的地方！ -->
+		<my-app></my-app>
+	</body>
+</html>
